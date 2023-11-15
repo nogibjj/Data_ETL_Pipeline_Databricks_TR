@@ -7,7 +7,7 @@ import os
 
 # Load environment variables
 load_dotenv()
-server_h = os.getenv("SERVER_HOSTNAME")
+server_h = "adb-6984678555706241.1.azuredatabricks.net"
 access_token = os.getenv("ACCESS_TOKEN")
 FILESTORE_PATH = "dbfs:/FileStore/mini11"
 url = f"https://{server_h}/api/2.0"
