@@ -10,7 +10,7 @@ load_dotenv()
 server_h = os.getenv("SERVER_HOSTNAME")
 access_token = os.getenv("ACCESS_TOKEN")
 FILESTORE_PATH = "dbfs:/FileStore/mini11"
-print(server_h, accesss_token)
+print(server_h, access_token)
 url = f"https://{server_h}/api/2.0"
 
 # Function to check if a file path exists and auth settings still work
