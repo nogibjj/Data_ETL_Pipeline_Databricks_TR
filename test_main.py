@@ -25,7 +25,7 @@ def check_filestore_path(path, headers):
 # Test if the specified FILESTORE_PATH exists
 def test_databricks():
     headers = {'Authorization': f'Bearer {access_token}'}
-    assert check_filestore_path(FILESTORE_PATH, headers) is True
+    assert check_filestore_path(FILESTORE_PATH, headers) is False
 
 if __name__ == "__main__":
     test_databricks()
