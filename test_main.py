@@ -10,6 +10,7 @@ load_dotenv()
 server_h = os.getenv("SERVER_HOSTNAME")
 access_token = os.getenv("ACCESS_TOKEN")
 FILESTORE_PATH = "dbfs:/FileStore/mini11"
+print(server_h, accesss_token)
 url = f"https://{server_h}/api/2.0"
 
 # Function to check if a file path exists and auth settings still work
@@ -25,7 +26,7 @@ def check_filestore_path(path, headers):
 # Test if the specified FILESTORE_PATH exists
 def test_databricks():
     headers = {'Authorization': f'Bearer {access_token}'}
-    assert check_filestore_path(FILESTORE_PATH, headers) is False
+    assert check_filestore_path(FILESTORE_PATH, headers) is True
 
 if __name__ == "__main__":
     test_databricks()
